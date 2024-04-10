@@ -20,32 +20,57 @@ body {
     width: 100%;
     height: 100%;
 }
-
-/* .loder h1{
-    position: fixed;
-    width: 100%;
+.loader{
     height: 100%;
-    color: #fff;
-    font-size: 12vw;
-    padding: 0.2em 0.3em;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    z-index: 999;
-}
-.overlay{
+    width: 100%;
+    background: #0b0606;
     position: fixed;
+    z-index: 99999;
     top: 0;
-    z-index: 99;
-    width: 100%;
-    height: 100%;
-    display: flex;   
+    transition: 1s all ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.bar{
-    width: 10vw;
-    height: 100vh;
-    background: #000;
-} */
+.loader>h1{
+    font-size: 5vw;
+    color: transparent;
+    background: linear-gradient(to right,rgb(254, 254, 254),rgb(92, 214, 255));
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    position: absolute;
+    opacity: 0;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+
+}
+.loader>h1:nth-child(2){
+    animation-delay: 2s;
+}
+.loader>h1:nth-child(3){
+    animation-delay: 3s;
+}
+@keyframes load {
+    0%{
+        opacity: 0;
+
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
 nav{
     position: fixed;
     top: 0;
@@ -55,8 +80,8 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 0 3vw;
+    z-index: 9;
     background: #000;
-    z-index: 999;
 }
 nav h2{
     font-size: 2vw;
@@ -67,6 +92,7 @@ nav h2{
     align-items: center;
     justify-content: center;
     gap: 2vw;
+   
 }
 .nav-part a{
     font-size: 1.3vw;
@@ -92,7 +118,12 @@ nav button>a{
     font-size: 1.3vw;
 
 }
-
+.nav-mobile{
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+    display: none;
+}
 #home{
     width: 100%;
     padding: 5vw 0;
@@ -126,6 +157,7 @@ nav button>a{
 }
 
 #name-div{
+    margin-top: 10vh;
     width: 100%;
     position: relative;
     white-space: nowrap;
@@ -140,7 +172,7 @@ nav button>a{
 #name-div h1{
     margin-left: 5vw;
     display: inline-block;
-    font-size: 8vw;
+    font-size: 6vw;
     z-index: 99;
     /* padding-right: 4vw; */
     color: #ffff;
@@ -334,9 +366,14 @@ nav button>a{
     transform: scale(1.1);
 }
 
+.elem-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(10em, 0fr));
+    grid-template-rows: 8em;
+}
 .skill-elem-card{
-    width: 10vw;
-    height: 7.5vw;
+    width: 150px;
+    height: 120px;
     background: rgb(21 16 48);
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.811);
     border-top: 1px solid rgb(122, 74, 225);
@@ -352,8 +389,8 @@ nav button>a{
 }
 
 .skill-elem-card1{
-    width: 10vw;
-    height: 7.5vw;
+    width: 150px;
+    height: 120px;
     position: relative;
     background: rgb(21 16 48);
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.811);
@@ -431,7 +468,7 @@ nav button>a{
     position: absolute;
     left: 32%;
     color: #fff;
-    top: 0;
+    bottom: 0;
 }
 
 .box img {
@@ -565,7 +602,7 @@ nav button>a{
 #contact{
     padding: 5vw;
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     background: #111;
     
 

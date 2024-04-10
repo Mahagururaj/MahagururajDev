@@ -1,38 +1,11 @@
-function loader(){
-    function startLoading() {
-        let countElem = document.querySelector(".count");
-        currentValue = 0;
-        function updateCount() {
-            if(currentValue === 100){
-                return;
-            }
-            currentValue += Math.floor(Math.random() * 10) + 1;
-            if(currentValue > 100){
-                currentValue = 100;
-            }
-            countElem.textContent = currentValue;
-            let delay = Math.floor(Math.random() *200) + 50;
-            setTimeout(updateCount, delay);
-        }
-        updateCount();
-    
-    }
-    startLoading();
-    
-    gsap.to(".count", 0.25,{
-        delay:3.5,
-        opacity:0,
-    })
-    gsap.to(".bar",1.5,{
-        delay:3.5,
-        height: 0,
-        stagger:{
-            amount: 0.5,
-        },
-        ease: "power4.out",
-    })
-}
-// loader()
+function loaderAnimation(){
+    var loader = document.querySelector(".loader")
+  setTimeout(function(){
+    loader.style.top="-100%"
+  
+  },4000)
+  }
+  loaderAnimation()
 
 function homenameAime(){
     var nameDev = document.querySelectorAll("#home #devname");
@@ -113,7 +86,7 @@ textcolorAnime()
 
 function pageActive() {
     let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('.nav-part a');
+let navLinks = document.querySelectorAll('.nav-part a , .nav-mobile a');
 
 window.onscroll = () => {
     let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
