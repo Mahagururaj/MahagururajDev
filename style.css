@@ -531,6 +531,7 @@ nav button>a{
     position: relative;
     text-decoration: none !important;
     height: 72px;
+    color: #0a66c2;
     overflow: hidden;
     border-top: 2px solid #fff;
     padding: 0 3px;
