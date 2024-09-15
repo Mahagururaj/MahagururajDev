@@ -1,50 +1,55 @@
-function loaderAnimation(){
-    var loader = document.querySelector(".loader")
-  setTimeout(function(){
-    loader.style.top="-100%"
-  
-  },4000)
-  }
-  loaderAnimation()
-
-function homenameAime(){
-    var nameDev = document.querySelectorAll("#home #devname");
-
-    nameDev.forEach(function(elem) {
-        var words = elem.textContent.split("");
-        var html = "";
-        
-        words.forEach(function(word) {
-            html += `<span>${word}</span> `;
-        });
+function loaderAnimation() {
+    var loader = document.querySelector(".loader");
     
-        elem.innerHTML = html.trim(); 
-    });
-    gsap.from("#home #devname >span", {
-         opacity: 0,
-         y: -50,
-         duration: 1,
-         stagger: 0.1
-        
-        })
+    setTimeout(function () {
+        loader.style.top = "-100%";
+
+        homenameAime(); 
+    }, 4000);
 }
 
-homenameAime()
+function homenameAime() {
+    var tl = gsap.timeline();
+    tl.from("#devname", {
+        opacity: 0,
+        x: -80,
+        delay: 0.4,
+        duration: 0.5,
+        stagger: 2
+    });
+    tl.from("#devname1", {
+        opacity: 0,
+        x: 80,
+        delay: 0.4,
+        duration: 0.5,
+        stagger: 2
+    });
+    tl.from("#devname2", {
+        opacity: 0,
+        x: -80,
+        delay: 0.4,
+        duration: 0.5,
+        stagger: 2
+    });
+}
+
+loaderAnimation();
 
 
-function moveAnime(){
+
+function moveAnime() {
     gsap.to("#name-div h1", {
         transform: "translateX(calc( -100% - 6vw - 4px))",
-          scrollTrigger: {
+        scrollTrigger: {
             trigger: "#name-div",
             scroller: "body",
             scrub: 0.7,
-          }
-        })
+        }
+    })
 }
 moveAnime()
 
-function cardskillAnime(){
+function cardskillAnime() {
     VanillaTilt.init(document.querySelectorAll(".skill-elem-card, .skill-elem-card1"), {
         max: 25,
         speed: 400
@@ -56,31 +61,31 @@ cardskillAnime()
 function textcolorAnime() {
     var paragraphs = document.querySelectorAll(".myintro p");
 
-    paragraphs.forEach(function(paragraph) {
+    paragraphs.forEach(function (paragraph) {
         var words = paragraph.textContent.split(" ");
         var html = "";
-        
-        words.forEach(function(word) {
+
+        words.forEach(function (word) {
             html += `<span>${word}</span> `;
         });
-    
-        paragraph.innerHTML = html.trim(); 
+
+        paragraph.innerHTML = html.trim();
     });
 
-gsap.to(".myintro p span",{
-    scrollTrigger:{
-        trigger:"#about",
-        start:"top bottom",
-        end:"bottom 80%",
-        scroller:"body",
-        duration:0.8,
-        delay:2,
-        scrub:2,
-    },
-    stagger:1,
-    color: "#ffff"
+    gsap.to(".myintro p span", {
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top bottom",
+            end: "bottom 80%",
+            scroller: "body",
+            duration: 0.8,
+            delay: 2,
+            scrub: 2,
+        },
+        stagger: 1,
+        color: "#ffff"
 
-})
+    })
 }
 textcolorAnime()
 
@@ -123,4 +128,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 }
 
 pageActive();
-
