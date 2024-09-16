@@ -87,13 +87,14 @@ nav h2{
     font-size: 2vw;
     color: #fff;
 }
-.nav-part{
+
+.nav-part {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2vw;
-   
 }
+
 .nav-part a{
     font-size: 1.3vw;
     text-decoration: none;
@@ -163,17 +164,6 @@ nav button>a{
     transform: rotate(-45deg);
     top: 10px;
 }
-
-
-/* Hide navigation links on mobile */
-.nav-part {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2vw;
-}
-
-
 
 #home{
     width: 100%;
