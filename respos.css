@@ -46,10 +46,7 @@
         text-decoration: none;
         transition: color 0.3s ease;
     }
-      .nav-mobile a:nth-child(1) {
-       color: #0da34e;
-        text-decoration: underline;
-    }
+
     .nav-mobile a:hover,
     .nav-mobile .active{
         color: #0da34e;
