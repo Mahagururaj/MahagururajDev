@@ -8,7 +8,7 @@
     }
 
     nav h2 {
-        font-size: 3.5vw;
+        font-size: 5vw;
         color: #fff;
     }
 
@@ -24,12 +24,15 @@
     nav button>a {
         text-decoration: none;
         color: #fff;
-        display: none;
+        display: block;
         font-size: 2.3vw;
 
     }
     .hamburger {
         display: flex;
+    }
+    .hamburger span{
+        display: block;
     }
     .nav-part a{
         color: #fff;
@@ -37,10 +40,21 @@
         text-decoration: none;
         transition: color 0.3s ease;
     }
-
-    .nav-part {
+    .nav-mobile a {
+        color: #fff;
+        font-size: 3.5vw;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .nav-mobile a:hover,
+    .nav-mobile .active{
+        color: #0da34e;
+        text-decoration: underline;
+    }
+    .nav-mobile{
+        z-index: 100;
         display: none;
-        position: absolute;
+        position: fixed;
         top: 7vh;
         left: -100%; /* Initially off-screen */
         background: #000;
@@ -51,7 +65,12 @@
         justify-content: center;
         gap: 3vh;
         opacity: 0; /* Hidden initially */
+
     }
+.nav-part{
+    display: none;
+}
+
     
     .nav-part.active {
         display: flex;

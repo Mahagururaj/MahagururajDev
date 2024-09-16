@@ -131,7 +131,7 @@ pageActive();
 
 function mobileNav(){
     const navToggle = document.querySelector('.hamburger');
-const navPart = document.querySelector('.nav-part'); 
+const navPart = document.querySelector('.nav-mobile'); 
 let activeMenu = null; // Track which menu is currently open
 
 // Toggle the menu based on current active state

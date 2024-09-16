@@ -129,7 +129,7 @@ nav button>a{
 }
 
 .hamburger span {
-    display: block;
+    display: none;
     position: absolute;
     height: 3px;
     width: 100%;
