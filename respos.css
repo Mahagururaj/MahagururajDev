@@ -13,13 +13,9 @@
     }
 
 
-    .nav-part {
-        display: none;
-    }
-
     nav button {
         padding: 2vw 5vw;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
 
@@ -28,11 +24,38 @@
     nav button>a {
         text-decoration: none;
         color: #fff;
+        display: none;
         font-size: 2.3vw;
 
     }
+    .hamburger {
+        display: flex;
+    }
+    .nav-part a{
+        color: #fff;
+        font-size: 3.5vw;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
 
-
+    .nav-part {
+        display: none;
+        position: absolute;
+        top: 7vh;
+        left: -100%; /* Initially off-screen */
+        background: #000;
+        width: 50%;
+        height: 40vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3vh;
+        opacity: 0; /* Hidden initially */
+    }
+    
+    .nav-part.active {
+        display: flex;
+    }
 
     #home {
         padding: 10vw 0;

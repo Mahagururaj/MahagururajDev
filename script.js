@@ -128,3 +128,48 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 }
 
 pageActive();
+
+function mobileNav(){
+    const navToggle = document.querySelector('.hamburger');
+const navPart = document.querySelector('.nav-part'); 
+let activeMenu = null; // Track which menu is currently open
+
+// Toggle the menu based on current active state
+navToggle.addEventListener('click', () => {
+    if (activeMenu === 'open') {
+        closeMenu(); // Close the menu if it is open
+    } else {
+        openMenu(); // Open the menu if it is closed
+    }
+});
+
+// Function to open the menu
+function openMenu() {
+    navPart.style.display = 'flex'; 
+    gsap.to(navPart, {
+        duration: 0.5,
+        left: '0', 
+        opacity: 1,
+        ease: "power2.out"
+    });
+    navToggle.classList.add('open'); 
+    activeMenu = 'open'; 
+}
+
+// Function to close the menu
+function closeMenu() {
+    gsap.to(navPart, {
+        duration: 0.5,
+        left: '-100%', // Slide out of view
+        opacity: 0,
+        ease: "power2.in",
+        onComplete: () => {
+            navPart.style.display = 'none'; 
+        }
+    });
+    navToggle.classList.remove('open'); 
+    activeMenu = null; // Reset active menu
+}
+
+}
+mobileNav()

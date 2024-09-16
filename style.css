@@ -119,6 +119,61 @@ nav button>a{
 
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 24px;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 20px;
+}
+
+/* Animation when the menu is open */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+
+/* Hide navigation links on mobile */
+.nav-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+
 
 #home{
     width: 100%;
