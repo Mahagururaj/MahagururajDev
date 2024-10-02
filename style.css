@@ -283,6 +283,9 @@ nav button>a {
 
 
 }
+.hero img:hover {
+    filter: grayscale(0%);
+}
 
 #name-div {
     margin-top: 10vh;
