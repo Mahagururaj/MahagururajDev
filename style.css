@@ -274,16 +274,14 @@ nav button>a {
 }
 
 
-.hero img {
+.hero1 img {
     object-fit: cover;
     object-position: center;
     filter: grayscale(100%);
     height: 100%;
     width: 100%;
-
-
 }
-.hero img:hover {
+.hero1 img:hover {
     filter: grayscale(0%);
 }
 
@@ -756,8 +754,8 @@ nav button>a {
 
 #projectlist a h6 {
     font-size: 1.6vmax;
-    width: 30%;
-    text-align: center;
+    width: 35%;
+    text-align: left;
     position: relative;
     z-index: 99;
     transition: color ease-in 0.4s;
