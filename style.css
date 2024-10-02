@@ -754,7 +754,7 @@ nav button>a {
 #projectlist a h6 {
     font-size: 1.6vmax;
     width: 30%;
-    text-align: right;
+    text-align: center;
     position: relative;
     z-index: 99;
     transition: color ease-in 0.4s;
